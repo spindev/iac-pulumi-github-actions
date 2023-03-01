@@ -1,0 +1,3 @@
+name: 02-container-app
+runtime: dotnet
+description: Creating an Azure Container App
