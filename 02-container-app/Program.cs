@@ -7,7 +7,6 @@ using Pulumi.AzureNative.App.Inputs;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-    // Create an Azure Resource Group
     var resourceGroup = new ResourceGroup("resourceGroup");
 
     var workspace = new Workspace("loganalytics", new WorkspaceArgs
