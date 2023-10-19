@@ -13,7 +13,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Use the official ASP.NET Core runtime image as a runtime image.
-FROM --platform=linux/amd64 mcr.microsoft.com/dotnet/aspnet:6.0
+FROM --platform=linux/amd64 mcr.microsoft.com/dotnet/aspnet:7.0
 
 # Set the working directory to /app
 WORKDIR /app
