@@ -1,10 +1,7 @@
-name: Deploy
+name: Continuous Deployment
 
 on:
-  push:
-    branches:
-      - main
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
