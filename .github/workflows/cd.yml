@@ -24,7 +24,7 @@ jobs:
     - name: Pulumi up
       uses: pulumi/actions@v4
       with:
-        command: preview
+        command: up
         stack-name: dev
         work-dir: ./iac/
       env:
