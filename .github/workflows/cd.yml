@@ -8,8 +8,11 @@ permissions:
 
 jobs:
   deploy:
+    name: deploy
     runs-on: ubuntu-latest
-
+    environment:
+      name: dev
+      url: $ {{ steps.pulumi.outputs.url }}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -23,6 +26,7 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
     - name: Pulumi up
       uses: pulumi/actions@v4
+      id: pulumi
       with:
         command: up
         stack-name: dev
