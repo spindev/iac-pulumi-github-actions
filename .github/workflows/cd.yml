@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: dev
-      url: $ {{ steps.pulumi.outputs.url }}
+      url: ${{ steps.pulumi.outputs.url }}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
