@@ -2,6 +2,7 @@ name: Continuous Deployment
 
 on:
   workflow_dispatch:
+  push:
 
 permissions:
   id-token: write
